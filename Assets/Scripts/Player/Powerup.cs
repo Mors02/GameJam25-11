@@ -18,6 +18,8 @@ public class Powerup
         "Aumenta velocità"
     };
 
+
+
 public Powerup(float value, string name, PowerUpTypes type)
     {
         this.value = value;
@@ -75,6 +77,9 @@ public Powerup(float value, string name, PowerUpTypes type)
                 stat++;
                 if (stat > 20)
                     stat = 20;
+                break;
+            case PowerUpTypes.cooldownReduction:
+                stat--;
                 break;
             default:
                 return (stat + 1);

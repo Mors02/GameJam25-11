@@ -779,6 +779,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   StatUpgradeUI: {fileID: 6589516063813831093}
   HealthBarUI: {fileID: 4017637742193532643}
+  DeathScreenUI: {fileID: 0}
   button1Text: {fileID: 6998247145957015946}
   button2Text: {fileID: 9096513034557115874}
   button3Text: {fileID: 123345095983991413}
@@ -1313,7 +1314,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 0}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
