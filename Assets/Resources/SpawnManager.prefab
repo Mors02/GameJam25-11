@@ -46,8 +46,14 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Round: 0
   enemyPrefabs:
-  - {fileID: 2624277757540182620, guid: 84439d05009072b4f8561578a8d46693, type: 3}
+  - {fileID: 5518910951301892698, guid: 63a9225a5682c1343b3f52674e017b54, type: 3}
+  - {fileID: 2402438673584423260, guid: f8779eb63e60dec469503af56462c73f, type: 3}
+  - {fileID: 7219577098604627187, guid: da9057c814224b0469264bfb40af98d4, type: 3}
+  - {fileID: 6787440058840057906, guid: d256ca53ecb3f944e9c8b24d94ec7dee, type: 3}
   spawnTimer:
   - 1
+  - 2
+  - 3
+  - 4
   player: {fileID: 0}
   routineThatEnded: 0

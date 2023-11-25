@@ -17,8 +17,8 @@ public class Stats : MonoBehaviour
 
         stats = new Dictionary<PowerUpTypes, float>()
         {
-            { PowerUpTypes.cooldownReduction, 10f },
-            { PowerUpTypes.laserDuration, 3f },
+            { PowerUpTypes.cooldownReduction, 3f },
+            { PowerUpTypes.laserDuration, 1f },
             { PowerUpTypes.laserNumber,  1f },
             { PowerUpTypes.health,  20f },
             { PowerUpTypes.movementSpeed, 10f }
