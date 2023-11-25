@@ -94,12 +94,6 @@ public class SpawnManager : MonoBehaviour
             Vector2 randomDir = (Random.insideUnitCircle).normalized;
             float randomDist = Random.Range(SpawnManager.i.cameraDim, SpawnManager.i.arenaDim);
             Vector2 origin = new Vector2(SpawnManager.i.t.position.x, SpawnManager.i.t.position.y);
-            
-            Debug.Log(randomDist);
-
-            Debug.Log(randomDir);
-
-            Debug.Log(origin);
 
             pos = origin + (randomDir * randomDist);
 
