@@ -74,7 +74,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   moveSpeed: 10
   rb: {fileID: 8790023390766883733}
-  stats: {fileID: 8717325917322069775}
 --- !u!54 &8790023390766883733
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -117,7 +116,7 @@ MonoBehaviour:
   laser: {fileID: 1949371886293947763}
   coolDownDuration: 0.1
   laserActiveDuration: 10
-  stats: {fileID: 0}
+  stats: {fileID: 8717325917322069775}
   laserArray:
   - {fileID: 6036933417658877663}
   - {fileID: 2142457255173782547}
@@ -173,6 +172,9 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+  OnDeath:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1 &2142457255173782547
 GameObject:
   m_ObjectHideFlags: 0
