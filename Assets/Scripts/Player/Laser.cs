@@ -16,6 +16,11 @@ public class Laser : MonoBehaviour
     [SerializeField]
     private Stats stats;
 
+    [SerializeField]
+    private GameObject[] laserArray;
+
+    private float numberOfLasers = 1;
+
     void Start()
     {
         laser.SetActive(false);
@@ -34,19 +39,28 @@ public class Laser : MonoBehaviour
         this.coolDownDuration = stats.GetStat(PowerUpTypes.cooldownReduction);
 
         this.laserActiveDuration = stats.GetStat(PowerUpTypes.laserDuration);
+
+        this.numberOfLasers = stats.GetStat(PowerUpTypes.laserNumber);
     }
 
     private IEnumerator ActivateLaser()
     {
         yield return new WaitForSeconds(coolDownDuration);
-        laser.SetActive(true);
+        foreach (GameObject laser in laserArray)
+        {
+            laser.SetActive(false);
+        }
+        laserArray[Mathf.Min((int)numberOfLasers-1, 2)].SetActive(true);
         StartCoroutine(DeactivateLaser());
     }
 
     private IEnumerator DeactivateLaser()
     {
         yield return new WaitForSeconds(laserActiveDuration);
-        laser.SetActive(false);
+        foreach (GameObject laser in laserArray)
+        {
+            laser.SetActive(false);
+        }
         StartCoroutine(ActivateLaser());
     }
 
