@@ -31,7 +31,7 @@ Transform:
   m_GameObject: {fileID: 1581479935007222482}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 21.525871, y: 8.730892, z: -7.120035}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -163,8 +163,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   laser: {fileID: 1949371886293947763}
-  coolDownDuration: 0.1
-  laserActiveDuration: 10
+  coolDownDuration: 2
+  laserActiveDuration: 0.5
 --- !u!1001 &1973064504788942009
 PrefabInstance:
   m_ObjectHideFlags: 0
