@@ -7,6 +7,7 @@ using TMPro;
 public class UIManager : MonoBehaviour
 {
     public GameObject StatUpgradeUI;
+    public GameObject HealthBarUI;
     [SerializeField]
     TMP_Text button1Text;
 
@@ -23,6 +24,10 @@ public class UIManager : MonoBehaviour
     [SerializeField]
     Button Button3;
 
+    [SerializeField]
+    Slider healthBar;
+
+
     Stats stats;
 
     bool GameIsPaused = false;
@@ -30,6 +35,12 @@ public class UIManager : MonoBehaviour
     void Start()
     {
         this.stats = GameObject.FindGameObjectWithTag("Player").GetComponent<Stats>();
+
+    }
+
+    public void DecreaseHealth()
+    {
+        this.healthBar.value = stats.GetStat(PowerUpTypes.health);
     }
 
     void Update()
@@ -53,6 +64,7 @@ public class UIManager : MonoBehaviour
         //overlayUI.SetActive(false);
 
         StatUpgradeUI.SetActive(true);
+        HealthBarUI.SetActive(false);
 
         Powerup upgrade1 = new Powerup(stats);
         Powerup upgrade2 = new Powerup(stats);
@@ -78,6 +90,7 @@ public class UIManager : MonoBehaviour
         // pauseAnimator.SetBool("Open", false);
         Time.timeScale = 1f;
         StatUpgradeUI.SetActive(false);
+        HealthBarUI.SetActive(true);
         GameIsPaused = false;
 
     }

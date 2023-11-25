@@ -32,6 +32,12 @@ public class Stats : MonoBehaviour
         Debug.Log("UPGRADED: " + powerup.UpgradeName + " - " + this.stats[powerup.type]);
     }
 
+    public void ReceiveDamage()
+    {
+        this.stats[PowerUpTypes.health]--;
+        OnModifyStats.Invoke();
+    }
+
     public float GetStat(PowerUpTypes type)
     {
         return this.stats[type];

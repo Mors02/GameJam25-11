@@ -28,4 +28,13 @@ public class Enemy : MonoBehaviour
             transform.Translate(Vector3.forward * moveSpeed * Time.deltaTime);
         }
     }
+
+    void OnTriggerEnter(Collider other)
+    {
+        if (other.gameObject.CompareTag("Player"))
+        {
+            Stats stats = other.gameObject.GetComponent<Stats>();
+            stats.ReceiveDamage();
+        }
+    }
 }
