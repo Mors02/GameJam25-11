@@ -50,10 +50,12 @@ MonoBehaviour:
   - {fileID: 2402438673584423260, guid: f8779eb63e60dec469503af56462c73f, type: 3}
   - {fileID: 7219577098604627187, guid: da9057c814224b0469264bfb40af98d4, type: 3}
   - {fileID: 6787440058840057906, guid: d256ca53ecb3f944e9c8b24d94ec7dee, type: 3}
+  - {fileID: 4097875980542664653, guid: 3e7ca3100405e004fa225fd0bf716fd9, type: 3}
   spawnTimer:
   - 1
   - 2
   - 3
   - 4
+  - 15
   player: {fileID: 0}
   routineThatEnded: 0
