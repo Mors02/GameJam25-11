@@ -73,6 +73,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 649b80e837072ef47b6f797c9fe131c5, type: 3}
       insertIndex: -1
       addedObject: {fileID: -2170361160793063807}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 649b80e837072ef47b6f797c9fe131c5, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 247145342190421925}
   m_SourcePrefab: {fileID: 100100000, guid: 649b80e837072ef47b6f797c9fe131c5, type: 3}
 --- !u!1 &7219577098604627187 stripped
 GameObject:
@@ -121,7 +124,29 @@ MonoBehaviour:
   force: 5
   destroyTime: 20
   asteroidExplosion: {fileID: 6786814983176493584, guid: 58a513562bbc8e94590c48efc9c8229d, type: 3}
+  powerUp: {fileID: 6233905093795335283, guid: 025b4feab534b6f44b574c159b8fcfde, type: 3}
 --- !u!135 &-2170361160793063807
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7219577098604627187}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Radius: 0.0055228663
+  m_Center: {x: -0.00036282628, y: 0.0002920463, z: -0.0005127444}
+--- !u!135 &247145342190421925
 SphereCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
