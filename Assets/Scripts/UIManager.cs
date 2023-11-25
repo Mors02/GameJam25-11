@@ -23,6 +23,10 @@ public class UIManager : MonoBehaviour
     [SerializeField]
     Button Button3;
 
+    [SerializeField]
+    Slider healthBar;
+
+
     Stats stats;
 
     bool GameIsPaused = false;
@@ -30,6 +34,12 @@ public class UIManager : MonoBehaviour
     void Start()
     {
         this.stats = GameObject.FindGameObjectWithTag("Player").GetComponent<Stats>();
+
+    }
+
+    public void DecreaseHealth()
+    {
+        this.healthBar.value = stats.GetStat(PowerUpTypes.health);
     }
 
     void Update()
