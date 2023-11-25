@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class EnemyMovement : MonoBehaviour
+public class Enemy : MonoBehaviour
 {
     public float moveSpeed = 3f;
     public float rotationSpeed = 3f;
@@ -11,11 +11,6 @@ public class EnemyMovement : MonoBehaviour
     {
         // Assuming your player has the "Player" tag. Adjust as needed.
         player = GameObject.FindGameObjectWithTag("Player").transform;
-
-        if (player == null)
-        {
-            Debug.LogError("Player not found. Make sure to tag your player with 'Player'.");
-        }
     }
 
     void Update()
@@ -26,7 +21,7 @@ public class EnemyMovement : MonoBehaviour
             Vector3 directionToPlayer = player.position - transform.position;
 
             // Rotate towards the player
-            Quaternion toRotation = Quaternion.LookRotation(directionToPlayer, Vector3.up);
+            Quaternion toRotation = Quaternion.LookRotation(directionToPlayer, Vector3.forward);
             transform.rotation = Quaternion.RotateTowards(transform.rotation, toRotation, rotationSpeed * Time.deltaTime);
 
             // Move towards the player
