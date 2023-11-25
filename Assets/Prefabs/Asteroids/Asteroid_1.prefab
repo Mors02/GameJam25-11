@@ -69,10 +69,10 @@ PrefabInstance:
       addedObject: {fileID: -1974595039623948549}
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 7b3bf9df53424634fb0cd9697fc15a1c, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 2271433931412504664}
+      addedObject: {fileID: 6031465171994457385}
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 7b3bf9df53424634fb0cd9697fc15a1c, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 6031465171994457385}
+      addedObject: {fileID: 2316592995183298763}
   m_SourcePrefab: {fileID: 100100000, guid: 7b3bf9df53424634fb0cd9697fc15a1c, type: 3}
 --- !u!1 &5518910951301892698 stripped
 GameObject:
@@ -106,7 +106,22 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 56
   m_CollisionDetection: 0
---- !u!135 &2271433931412504664
+--- !u!114 &6031465171994457385
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5518910951301892698}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2a80052b6d9d07445859d76b9a570620, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  force: 5
+  destroyTime: 20
+  asteroidExplosion: {fileID: 6786814983176493584, guid: 58a513562bbc8e94590c48efc9c8229d, type: 3}
+--- !u!135 &2316592995183298763
 SphereCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -127,18 +142,3 @@ SphereCollider:
   serializedVersion: 3
   m_Radius: 0.0069055837
   m_Center: {x: -0.00030142046, y: -0.00011408099, z: -0.00037782182}
---- !u!114 &6031465171994457385
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5518910951301892698}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2a80052b6d9d07445859d76b9a570620, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  force: 5
-  destroyTime: 20
-  asteroidExplosion: {fileID: 6786814983176493584, guid: 58a513562bbc8e94590c48efc9c8229d, type: 3}

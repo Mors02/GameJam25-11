@@ -24,7 +24,7 @@ public class Laser : MonoBehaviour
 
     void Start()
     {
-        laser.SetActive(false);
+        //laser.SetActive(false);
 
         StartCoroutine(ActivateLaser());
     }
