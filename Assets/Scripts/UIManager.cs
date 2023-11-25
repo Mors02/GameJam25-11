@@ -29,6 +29,12 @@ public class UIManager : MonoBehaviour
     [SerializeField]
     Slider healthBar;
 
+    [SerializeField]
+    Image sprite1;
+    [SerializeField]
+    Image sprite2;
+    [SerializeField]
+    Image sprite3;
 
     Stats stats;
 
@@ -47,7 +53,7 @@ public class UIManager : MonoBehaviour
 
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Escape))
+        /*if (Input.GetKeyDown(KeyCode.Escape))
         {
 
             if (GameIsPaused)
@@ -56,7 +62,7 @@ public class UIManager : MonoBehaviour
                 Pause();
 
 
-        }
+        }*/
     }
 
     public void Pause()
@@ -82,6 +88,10 @@ public class UIManager : MonoBehaviour
         Button1.onClick.AddListener(delegate { this.stats.UpdateStat(upgrade1); });
         Button2.onClick.AddListener(delegate { this.stats.UpdateStat(upgrade2); });
         Button3.onClick.AddListener(delegate { this.stats.UpdateStat(upgrade3); });
+
+        sprite1.sprite = upgrade1.sprite;
+        sprite2.sprite = upgrade2.sprite;
+        sprite3.sprite = upgrade3.sprite;
 
         Time.timeScale = 0f;
         GameIsPaused = true;
@@ -128,3 +138,4 @@ public class UIManager : MonoBehaviour
     }
 
 }
+

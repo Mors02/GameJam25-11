@@ -6,6 +6,12 @@ public class PowerUp : MonoBehaviour
 {
     public GameObject player;
 
+    public UIManager ui;
+
+    void Start()
+    {
+        ui = GameObject.FindGameObjectWithTag("Canvas").GetComponent<UIManager>();
+    }
 
     private void OnTriggerEnter(Collider collision)
     {
@@ -13,8 +19,7 @@ public class PowerUp : MonoBehaviour
         {
             player = collision.gameObject;
 
-            //activate script on player to choose power ups--------
-            print("power up");
+            ui.Pause();
 
             Destroy(this.gameObject);
         }

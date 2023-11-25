@@ -115,14 +115,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   laser: {fileID: 1949371886293947763}
-
-  coolDownDuration: 1
-  laserActiveDuration: 1
+  coolDownDuration: 0
+  laserActiveDuration: 0
   stats: {fileID: 8717325917322069775}
-  laserArray:
-  - {fileID: 6036933417658877663}
-  - {fileID: 2142457255173782547}
-  - {fileID: 4867880949728879720}
+  laserArray: []
 --- !u!114 &8717325917322069775
 MonoBehaviour:
   m_ObjectHideFlags: 0

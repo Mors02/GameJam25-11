@@ -29,7 +29,7 @@ public class Laser : MonoBehaviour
         StartCoroutine(ActivateLaser());
     }
 
-    void Update()
+    public void UpdateLasers()
     {
 
         this.coolDownDuration = stats.GetStat(PowerUpTypes.cooldownReduction);

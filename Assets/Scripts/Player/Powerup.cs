@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class Powerup
 {
@@ -8,6 +9,7 @@ public class Powerup
     public PowerUpTypes type;
     public Stats stats;
     public string UpgradeName;
+    public Sprite sprite;
 
     static string[] PowerUpNames = new string[]
     {
@@ -18,7 +20,7 @@ public class Powerup
         "Aumenta velocità"
     };
 
-public Powerup(float value, string name, PowerUpTypes type)
+    public Powerup(float value, string name, PowerUpTypes type)
     {
         this.value = value;
         this.type = type;
@@ -61,6 +63,7 @@ public Powerup(float value, string name, PowerUpTypes type)
 
         this.type = (PowerUpTypes)rand;
         this.value = Upgrade(this.type);
+        this.sprite = GameAssets.i.buttons[rand];
         
         this.UpgradeName = PowerUpNames[rand];
 
