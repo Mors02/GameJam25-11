@@ -34,13 +34,34 @@ public Powerup(float value, string name, PowerUpTypes type)
         this.stats = stats;
     }
 
-    public void RandomizeSetup()
+    public void RandomizeSetup(int[] without)
     {
-        int rand = Random.Range(0, System.Enum.GetNames(typeof(PowerUpTypes)).Length);
+        int rand = -1;
+        bool found = false;
+        int safeValue = 300;
+        do
+        {
+            rand = Random.Range(0, System.Enum.GetNames(typeof(PowerUpTypes)).Length);
+            
+            foreach (int n in without) // go over every number in the list
+            {
+                if (n == rand) // check if it matches
+                {
+                    found = true;
+                    break; // no need to check any further
+                } else
+                {
+                    found = false;
+                }
+            }
+            safeValue--;
+        } while (found && safeValue > 0);
+
+        Debug.Log(safeValue);
 
         this.type = (PowerUpTypes)rand;
         this.value = Upgrade(this.type);
-        Debug.Log(value);
+        
         this.UpgradeName = PowerUpNames[rand];
 
     }

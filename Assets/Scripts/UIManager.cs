@@ -57,9 +57,9 @@ public class UIManager : MonoBehaviour
         Powerup upgrade1 = new Powerup(stats);
         Powerup upgrade2 = new Powerup(stats);
         Powerup upgrade3 = new Powerup(stats);
-        upgrade1.RandomizeSetup();
-        upgrade2.RandomizeSetup();
-        upgrade3.RandomizeSetup();
+        upgrade1.RandomizeSetup(new int[] {});
+        upgrade2.RandomizeSetup(new int[] { (int)upgrade1.type });
+        upgrade3.RandomizeSetup(new int[] { (int)upgrade2.type, (int)upgrade1.type });
 
         this.button1Text.text = upgrade1.UpgradeName;
         this.button2Text.text = upgrade2.UpgradeName;
