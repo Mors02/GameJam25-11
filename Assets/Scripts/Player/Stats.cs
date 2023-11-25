@@ -9,11 +9,15 @@ public class Stats : MonoBehaviour
 
 
     public UnityEvent OnModifyStats;
+    public UnityEvent OnDeath;
 
     void Start()
     {
         if (OnModifyStats == null)
             OnModifyStats = new UnityEvent();
+
+        if (OnDeath == null)
+            OnDeath = new UnityEvent();
 
         stats = new Dictionary<PowerUpTypes, float>()
         {
@@ -36,6 +40,10 @@ public class Stats : MonoBehaviour
     {
         this.stats[PowerUpTypes.health]--;
         OnModifyStats.Invoke();
+        if (this.stats[PowerUpTypes.health] <= 0)
+        {
+            OnDeath.Invoke();
+        }
     }
 
     public float GetStat(PowerUpTypes type)
