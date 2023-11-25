@@ -32,7 +32,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 21.525871, y: 8.730892, z: -7.120035}
-  m_LocalScale: {x: 11.802969, y: 11.927154, z: 11.472235}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 5162531039583000110}
@@ -121,7 +121,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 48f560a83a2076a4fa6c5920aab29143, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  moveSpeed: 50
+  moveSpeed: 10
   rb: {fileID: 8790023390766883733}
 --- !u!54 &8790023390766883733
 Rigidbody:
@@ -163,8 +163,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   laser: {fileID: 1949371886293947763}
-  coolDownDuration: 1
-  laserActiveDuration: 1
+  coolDownDuration: 0.1
+  laserActiveDuration: 10
 --- !u!1001 &1973064504788942009
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -178,7 +178,15 @@ PrefabInstance:
       value: GreenLaser
       objectReference: {fileID: 0}
     - target: {fileID: 6684825183945337495, guid: 305ec159b8c409b45abb228878c98a4d, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6684825183945337495, guid: 305ec159b8c409b45abb228878c98a4d, type: 3}
       propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6684825183945337495, guid: 305ec159b8c409b45abb228878c98a4d, type: 3}
+      propertyPath: m_LocalRotation.y
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6684825183945337495, guid: 305ec159b8c409b45abb228878c98a4d, type: 3}
@@ -191,7 +199,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6684825183945337495, guid: 305ec159b8c409b45abb228878c98a4d, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
-      value: 90
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
