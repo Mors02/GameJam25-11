@@ -3,11 +3,13 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
+using UnityEngine.SceneManagement;
 
 public class UIManager : MonoBehaviour
 {
     public GameObject StatUpgradeUI;
     public GameObject HealthBarUI;
+    public GameObject DeathScreenUI;
     [SerializeField]
     TMP_Text button1Text;
 
@@ -93,6 +95,20 @@ public class UIManager : MonoBehaviour
         HealthBarUI.SetActive(true);
         GameIsPaused = false;
 
+    }
+
+    public void Death()
+    {
+        HealthBarUI.SetActive(false);
+        DeathScreenUI.SetActive(true);
+        
+    }
+
+    int playAgainSceneId = 1;
+
+    public void Restart()
+    {
+       SceneManager.LoadScene(playAgainSceneId);   
     }
 
     public void RemoveAllListener()

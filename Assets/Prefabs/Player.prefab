@@ -115,6 +115,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   laser: {fileID: 1949371886293947763}
+
   coolDownDuration: 1
   laserActiveDuration: 1
   stats: {fileID: 8717325917322069775}
@@ -173,6 +174,9 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+  OnDeath:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1 &2142457255173782547
 GameObject:
   m_ObjectHideFlags: 0
