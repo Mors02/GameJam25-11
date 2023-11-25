@@ -778,6 +778,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   StatUpgradeUI: {fileID: 6589516063813831093}
+  HealthBarUI: {fileID: 4017637742193532643}
   button1Text: {fileID: 6998247145957015946}
   button2Text: {fileID: 9096513034557115874}
   button3Text: {fileID: 123345095983991413}

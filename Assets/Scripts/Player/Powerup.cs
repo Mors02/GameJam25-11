@@ -71,9 +71,15 @@ public Powerup(float value, string name, PowerUpTypes type)
         float stat = stats.GetStat(type);
         switch (type)
         {
+            case PowerUpTypes.health:
+                stat++;
+                if (stat > 20)
+                    stat = 20;
+                break;
             default:
                 return (stat + 1);
         }
+        return stat;
     }
 }
 
