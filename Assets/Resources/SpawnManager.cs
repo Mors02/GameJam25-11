@@ -73,7 +73,7 @@ public class SpawnManager : MonoBehaviour
         //that ended is the same (or more idk) then they all ended.
         if (routineThatEnded >= SpawnManager.i.enemyPrefabs.Length)
         {
-            //Debug.Log("NEW ROUND: " + (SpawnManager.i.Round+1));
+            Debug.Log("NEW ROUND: " + (SpawnManager.i.Round+1));
             //reset the number
             SpawnManager.i.routineThatEnded = 0;
             //next round;
@@ -95,7 +95,7 @@ public class SpawnManager : MonoBehaviour
             float randomDist = Random.Range(SpawnManager.i.cameraDim, SpawnManager.i.arenaDim);
             Vector2 origin = new Vector2(SpawnManager.i.t.position.x, SpawnManager.i.t.position.y);
 
-            pos = origin + (randomDir * randomDist);
+            pos = (origin + randomDir) * randomDist;
 
             //pos = new Vector2(Random.Range(SpawnManager.i.cameraDim, SpawnManager.i.arenaDim), Random.Range(SpawnManager.i.cameraDim, SpawnManager.i.arenaDim))
                 

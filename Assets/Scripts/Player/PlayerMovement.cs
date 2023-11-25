@@ -5,21 +5,14 @@ using UnityEngine;
 public class PlayerMovement : MonoBehaviour
 {
   
-    public float moveSpeed = 10f;
+    public float moveSpeed = 0f;
     public Rigidbody rb;
     Vector3 movement;
-    [SerializeField]
-    private Stats stats;
+
     // Start is called before the first frame update
     void Start()
     {
         SpawnManager.i.NewRound();
-        this.moveSpeed = stats.GetStat(PowerUpTypes.movementSpeed);
-    }
-
-    public void UpdateMovement()
-    {
-        this.moveSpeed = stats.GetStat(PowerUpTypes.movementSpeed);
     }
 
     // Update is called once per frame

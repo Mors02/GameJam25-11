@@ -13,6 +13,7 @@ public class Laser : MonoBehaviour
     [SerializeField]
     private float laserActiveDuration;
 
+
     [SerializeField]
     private Stats stats;
 
@@ -25,22 +26,18 @@ public class Laser : MonoBehaviour
     {
         laser.SetActive(false);
 
-        stats = this.gameObject.GetComponent<Stats>();
-
-        this.coolDownDuration = stats.GetStat(PowerUpTypes.cooldownReduction);
-
-        this.laserActiveDuration = stats.GetStat(PowerUpTypes.laserDuration);
-
         StartCoroutine(ActivateLaser());
     }
 
-    public void UpdateLaser()
+    void Update()
     {
+
         this.coolDownDuration = stats.GetStat(PowerUpTypes.cooldownReduction);
 
         this.laserActiveDuration = stats.GetStat(PowerUpTypes.laserDuration);
 
         this.numberOfLasers = stats.GetStat(PowerUpTypes.laserNumber);
+
     }
 
     private IEnumerator ActivateLaser()
